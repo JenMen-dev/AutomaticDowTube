@@ -27,37 +27,54 @@ _Este es un programa de línea de comandos para descargar vídeos o extraer audi
 _Este es un framework de audio de codigo abierto_ 
 
 
-### Descarga e Instalación youtube-dl.exe y ffmpeg 🔧
+### Descarga e Instalación youtube-dl.exe 🔧
 
-_Descarga youtube-dl.exe:_
+_(Este repositorio ya cuenta con este archivo, no obstante la informacíon siempre es buena, y aquí tienes las formas de descargarlo)
 
 - Windows:
 
-_Descarga youtube-dl.exe aquí: "" y alojala el archivo en el mismo directorio donde se encuentran los ejecutables._
+_Descarga youtube-dl.exe aquí: https://yt-dl.org/downloads/2020.11.19/youtube-dl.exe_
 
-_Descarga ffmpeg aquí: https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2_. Es una carpeta, alojala en el directorio raiz.
+_Copiaremos el ejecutable en una carpeta aparte (mejor que dejarlo en Descargas) ya que no es un instalador._
+
+
+- Linux:
+
+_Para instalarlo de inmediato para todos los usuarios de UNIX (Linux, OS X, etc.), escriba:_ 
+```
+$ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+```
+_ó bien_
+```
+$ sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+```
+_ó bien, si lo queremos instalar mediante un gestor de paquetes:_
+```
+$ sudo apt install youtube-dl
+```
+
+_Damos permisos de ejecución a nuestro usuario para el archivo:_
+```
+$ sudo chmod a+rx /usr/local/bin/youtube-dl
+```
+
+### Descarga e Instalación ffmpeg 🔧
+
+- Windows:
+
+_Descarga ffmpeg aquí: https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2. Es una carpeta, alojala en el directorio raiz._
+
+Ahora, tras descomprimir los archivos, copiaremos por lo menos el ffmpeg.exe en el mismo directorio donde se encuentra youtube-dl.exe.
 
 _(aquí encontraras toda la dpcumentacion del software: https://github.com/FFmpeg/FFmpeg)_
 
 
 - Linux:
 
-_Para instalarlo de inmediato para todos los usuarios de UNIX (Linux, OS X, etc.), escriba:_ 
-
-$ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-
-_ó bien_
-
-$ sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-
-_ó bien, si lo queremos instalar mediante un gestor de paquetes:_
-
-$ sudo apt install youtube-dl
-
-
-_Damos permisos de ejecución a nuestro usuario para el archivo:_
-
-$ sudo chmod a+rx /usr/local/bin/youtube-dl
+_Buscamos e instalaremos el paquete ffmpe_
+```
+sudo apt install ffmpeg
+```
 
 
 ### Configuración youtube-dl.exe 🔧
@@ -72,10 +89,10 @@ por lo que es posible que deba crearlo usted mismo.
 - Windows:
 
 _Puedes crear el archivo de configuración usando los siguientes dos comandos:_
-
+```
 mkdir -p ~/.config/youtube-dl/
 echo "-o ~/Downloads/%(title)s-%(id)s.%(ext)s" > ~/.config/youtube-dl/config
-
+```
 _El primer comando mkdir crea las carpetas que llevan al archivo de configuración._
 _El segundo comando echo escribe la opción de salida en el archivo._
 
@@ -83,12 +100,14 @@ _El segundo comando echo escribe la opción de salida en el archivo._
 - Linux:
 
 _Cear un archivo de configuración que sea usado para la totalidad de usuarios:_
-
+```
 $ sudo touch /etc/youtube-dl.conf
+```
 
 _Crear un archivo de configuración que  sea útil para su usuario deberán ejecutar el siguiente comando:_
-
+```
 $ touch ~/.config/youtube-dl/config
+```
 
 _Las opciones establecidas dentro de su archivo de configuración se aplican a cada llamada a youtube-dl_
 _Use la opción --ignore -config para deshabilitar la lectura del archivo de configuración._
@@ -119,8 +138,8 @@ Por ejemplo, con el siguiente archivo de configuración, youtube-dl siempre extr
 
 ```
 
-Nota: Consulten el siguiente enlace para ver una lista completa de los parámetros que se pueden introducir en el fichero de configuración:
-https://github.com/ytdl-org/youtube-dl/blob/master/README.md
+_Nota: Consulten el siguiente enlace para ver una lista completa de los parámetros que se pueden introducir en el fichero de configuración:_
+_https://github.com/ytdl-org/youtube-dl/blob/master/README.md_
 
 
 ## Como usar este programa
@@ -143,11 +162,12 @@ Elije el archivo.exe que se adapte a la modalidad de descarga que deseas (1to1 o
 
 ### Errores posibles ⌨️
 
+- Error "ffprobe":
+
 Aparece cuando el programa intenta descargar el segundo archivo de alguna de las listas.
 
-_"ERROR: ffprobe/avprobe and ffmpeg/avconv not found. Please install one"
-_
-_Ejemplo:_
+ERROR: ffprobe/avprobe and ffmpeg/avconv not found. Please install one
+
 ```
 [youtube] 0o268IlcLbY: Downloading webpage
 [download] El Origen de Navidad _ Destripando la Historia _ CANCIÓN Parodia-0o268IlcLbY.webm has already been downloaded
@@ -160,6 +180,26 @@ _La tercera el % de la descarga a tiempo real._
 _La cuarta es el error, que aparecerá al intentar descargar el siguiente video de la lista._
 
 _-Quiere decir que no tienes instalado ( o ubicado en la carpeta correcta ) ffprobe, consulta la documentación: https://github.com/FFmpeg/FFmpeg_
+
+
+- Error "HTTP Error 403: Forbidden"
+
+Aparece al intentar descargar.
+
+Revisa:
+
+Que la categoría de video: público
+
+Actualizaciones al dia con los siguientes comandos:
+```
+python -m pip install --upgrade pip
+pip install --upgrade youtube-dl
+```
+
+Limpia el almacenamiento en caché:
+```
+ERROR: unable to download video data: HTTP Error 403: Forbidden
+```
 
 
 ## Despliegue 📦
