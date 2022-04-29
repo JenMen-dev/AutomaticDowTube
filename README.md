@@ -1,6 +1,3 @@
-
-(errores actuales: down_list_mp3.py down_list_mp4.py, solo descargan la primera cancion de la lista, al finalizar esta, lanza un error (descrito mas abajo en errores posibles)).
-
 # AutomaticDowTube
 
 Descarga contenido de video y audio de casi cualquier plataforma web.
@@ -234,14 +231,11 @@ Usamos version ""
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo ... para detalles
 
-## Expresiones de Gratitud 🎁
+(errores actuales: down_list_mp3.py down_list_mp4.py, solo descargan la primera cancion de la lista, al finalizar esta, lanza un error (descrito mas abajo en errores posibles)).
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-
-
+Atajo para saltar directamente al cuadro de diálogo Variables de entorno EJECUTANDO/CMD/PowerShell esto: 
+```
+rundll32.exe sysdm.cpl,EditEnvironmentVariables
+```
 ---
 ⌨️ con ❤️ por [J.M](https://(WEB)) 😊
