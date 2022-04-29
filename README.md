@@ -231,7 +231,7 @@ Usamos version ""
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo ... para detalles
 
-(errores actuales: down_list_mp3.py down_list_mp4.py, solo descargan la primera cancion de la lista, al finalizar esta, lanza un error (descrito mas abajo en errores posibles)).
+## Extras 📄
 
 Atajo para saltar directamente al cuadro de diálogo Variables de entorno EJECUTANDO/CMD/PowerShell esto: 
 ```
@@ -239,3 +239,6 @@ rundll32.exe sysdm.cpl,EditEnvironmentVariables
 ```
 ---
 ⌨️ con ❤️ por [J.M](https://(WEB)) 😊
+
+(errores actuales: down_list_mp3.py down_list_mp4.py, solo descargan la primera cancion de la lista, al finalizar esta, lanza un error (descrito mas abajo en errores posibles)).
+
