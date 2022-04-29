@@ -2,9 +2,7 @@
 
 Descarga contenido de video y audio de casi cualquier plataforma web.
 
-¡Script de extrema sencillez!
-
-En este programa nos hemos centrado en el portal yotube por ser el más usado, no obstante, se puede utilizar en cualquier portal cambiando la configuración necesaria.
+En este repositorio nos hemos centrado en el portal yotube por ser el más usado, no obstante, se puede utilizar en cualquier portal cambiando la configuración necesaria.
 
 ## Comenzando 🚀 
 
